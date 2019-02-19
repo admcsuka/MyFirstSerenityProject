@@ -34,7 +34,6 @@ public class LoginPage extends PageObject {
 
     public boolean invalidLoginIfNextStep(String errorMessage, String password){
         waitFor(invalidLoginMessage);
-        System.out.println(invalidLoginMessage.getText());
         if (invalidLoginMessage.getText().contains(errorMessage)){
             typeInto(passwordField,password);
             return true;

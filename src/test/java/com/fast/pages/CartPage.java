@@ -50,7 +50,6 @@ public class CartPage extends PageObject {
 
     public boolean checkProductInCart(String productName) {
         waitFor(productNameInCart);
-        System.out.println("the product name is: "+productNameInCart.getText());
         return productNameInCart.containsText(productName);
     }
 
@@ -75,7 +74,6 @@ public class CartPage extends PageObject {
 
         if ((multipleQtyProduct == totalPriceFin) && (multipleQtyProduct == subtotalFin)) {
             waitFor(checkoutButton);
-            System.out.println("You better work!");
             clickOn(checkoutButton);
         }
     }

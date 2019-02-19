@@ -69,7 +69,6 @@ public class AdminPage extends PageObject {
     public boolean usernameList(String username) {
         for (WebElementFacade userNames : newUsernames) {
             if (userNames.getText().contains(username)) {
-                System.out.println("The username exits!");
                 return true;
             }
         }

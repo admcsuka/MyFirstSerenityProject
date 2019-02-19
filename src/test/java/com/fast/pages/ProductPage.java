@@ -62,7 +62,6 @@ public class ProductPage extends PageObject {
 
     public boolean checkMessageSearchBarNoProductFound(String errorMessage){
         waitFor(noSearchResultMessage);
-        System.out.println(noSearchResultMessage.getText());
         return noSearchResultMessage.containsText(errorMessage);
     }
 

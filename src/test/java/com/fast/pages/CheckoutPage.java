@@ -109,13 +109,11 @@ public class CheckoutPage extends PageObject {
 
     public boolean checkOrderPlacement(String orderPlacementMessage) {
         waitFor(orderRecievedMessage);
-        System.out.println(orderRecievedMessage.getText());
         return orderRecievedMessage.containsText(orderPlacementMessage);
     }
 
     public boolean missingDetails(String missingPhoneNO, String wrongEmailAddress, String newNumber, String newEmail) {
         if ((missingPhone.getText().contains(missingPhoneNO)) && (wrongEmail.getText().contains(wrongEmailAddress))) {
-            System.out.println("You better work!");
             typeInto(billingPhoneNumber, newNumber);
             typeInto(billingEmail, newEmail);
             return true;
